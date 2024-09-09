@@ -23,9 +23,7 @@
 <div id='oque'/> 
   
 ## O que é? 
-<p> Um array é uma variável especial que pode guardar mais de um valor: 
-  An array is a special variable, which can hold more than one value: </p>
-
+<p> No JavaScript, um array é uma estrutura de dados que permite armazenar múltiplos valores sob um único nome de variável. Esses valores são organizados de forma ordenada e acessíveis por meio de índices numéricos, começando do zero. Arrays são muito úteis para gerenciar coleções de dados e realizar operações como iteração, filtragem e transformação de elementos. Além disso, os arrays em JavaScript são dinâmicos, o que significa que podem crescer e diminuir de tamanho conforme necessário, e oferecem uma ampla gama de métodos integrados para manipulação e processamento dos dados que contêm. </p>
 
 
 <div id='caracteristicas'/>
@@ -36,6 +34,7 @@
 <div id='sort'/>
    
 ### Sort
+<p>o método `sort()` é utilizado para ordenar os elementos de um array em ordem alfabética ou numérica, conforme o tipo de dados e a função de comparação fornecida. Por padrão, `sort()` organiza os elementos como strings,</p>
 
 
 
