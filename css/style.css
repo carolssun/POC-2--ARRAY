@@ -1,22 +1,127 @@
 /* VARIÁVEIS */
-
+:root {
+    --primary-color: #e83e8c; 
+    --primary-dark: #d6336c; 
+    --secondary-color: #fce4ec; 
+    --text-color: #333;
+    --heading-font: 'Arial', sans-serif;
+    --body-font: 'Georgia', serif;
+}
 
 /* GERAL */
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 10px;
+    background-color: #f4f4f4; 
+}
 
+h1, h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
 
 /* TEXTO */
+p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
 
+section p {
+    margin: 10px 0;
+}
 
-/* SORT */
+/* GERAL DO CARD */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: auto;
+    margin: 10px;
+    box-shadow: 1px 3px 2px rgb(255, 182, 193); 
+    background-color: #fff; /* Fundo branco dos cards */
+}
 
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3); 
+}
+
+.card-img {
+    width: 100px; 
+    height: 100px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+}
 
 /* FILTER */
+#filter {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: var(--secondary-color); 
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
 
+#filter-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.filter-btn {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color); 
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+   
+}
+
+.filter-btn.active {
+    background-color: var(--primary-dark); 
+}
+
+.filter-btn:hover {
+    background-color: var(--primary-dark); 
+    transform: scale(1.05);
+}
 
 /* MAP */
 
-
 /* REDUCE */
-
 
 /* SPREAD */
