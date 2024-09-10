@@ -23,7 +23,7 @@
 <div id='oque'/> 
   
 ## O que é? 
-<p> No JavaScript, um array é uma estrutura de dados que permite armazenar múltiplos valores sob um único nome de variável. Esses valores são organizados de forma ordenada e acessíveis por meio de índices numéricos, começando do zero. Arrays são muito úteis para gerenciar coleções de dados e realizar operações como iteração, filtragem e transformação de elementos. Além disso, os arrays em JavaScript são dinâmicos, o que significa que podem crescer e diminuir de tamanho conforme necessário, e oferecem uma ampla gama de métodos integrados para manipulação e processamento dos dados que contêm. </p>
+ No JavaScript, um array é uma estrutura de dados que permite armazenar múltiplos valores sob um único nome de variável. Esses valores são organizados de forma ordenada e acessíveis por meio de índices numéricos, começando do zero. Arrays são muito úteis para gerenciar coleções de dados e realizar operações como iteração, filtragem e transformação de elementos. Além disso, os arrays em JavaScript são dinâmicos, o que significa que podem crescer e diminuir de tamanho conforme necessário, e oferecem uma ampla gama de métodos integrados para manipulação e processamento dos dados que contêm. 
 
 
 <div id='caracteristicas'/>
@@ -34,7 +34,8 @@
 <div id='sort'/>
    
 ### Sort
-<p>o método `sort()` é utilizado para ordenar os elementos de um array em ordem alfabética ou numérica, conforme o tipo de dados e a função de comparação fornecida. Por padrão, `sort()` organiza os elementos como strings,</p>
+O método `sort()` serve para ordenar os elementos de um array. Ele altera o array original, organizando seus itens em ordem alfabética ou numérica. No entanto, por padrão, a ordenação é feita como se os valores fossem strings, o que pode gerar resultados incorretos ao trabalhar com números.
+
 
 
 
@@ -53,16 +54,18 @@
 <div id='reduce'/>
    
 ### Reduce
+O método `reduce()` aplica uma função acumuladora a cada elemento do array (da esquerda para a direita) para reduzir o array a um único valor.
 
 
 
 <div id='spread'/>
    
 ### Spread
+O operador de `spread (...)` permite expandir elementos de arrays ou objetos iteráveis em lugares onde múltiplos elementos ou argumentos são esperados.
+
+
 
 <div id='autoras'/>
-
-
    
 ## Autoras:
 * Carolina Sun Ramos Nantes de Castilho 
