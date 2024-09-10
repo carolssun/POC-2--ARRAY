@@ -47,7 +47,7 @@
 <div id='map'/>
    
 ### Map
-
+<p>O método map() em JavaScript cria um novo array transformando cada item do array original com uma função. Ele não muda o array original e evita o uso de loops para fazer essas transformações</p>
 
 
 <div id='reduce'/>
