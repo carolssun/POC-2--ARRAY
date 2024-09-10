@@ -32,7 +32,6 @@ const exibirGatos = (racaFiltrada) => {
     }
 };
 
-
 const configurarFiltros = () => {
     document.querySelectorAll(".filter-btn").forEach(botao => {
         botao.addEventListener("click", function() {
@@ -43,6 +42,29 @@ const configurarFiltros = () => {
     });
 };
 
+// ------- REDUCE -------
+// Retorna a soma da idade de todos os gatinhos da lista 
+const idadeGatinhos = listaGatinhos.reduce((accumulator, gato) => {
+    return accumulator += gato.idade;
+  }, 0)
+
+  console.log(idadeGatinhos);
+
+// ------- SPREAD -------
+// Retona a combinação de duas listas de gatinhos
+const listaGatinhosAux = [
+    { nome: "Gato laranja", idade: 5, foto: "./imagens/branco.png", raca: "Munchkin" },
+    { nome: "Gato cinza", idade: 1, foto: "./imagens/calico.png", raca: "Maine Coon" },
+]
+
+const listaGatinhosSpread = [
+    { nome: "Gato laranja", idade: 5, foto: "./imagens/branco.png", raca: "Munchkin" },
+    { nome: "Gato cinza", idade: 1, foto: "./imagens/calico.png", raca: "Maine Coon" },
+    ...listaGatinhos
+]
+
+console.log(listaGatinhosAux)
+console.log(listaGatinhosSpread)
 
 window.onload = () => {
     exibirGatos('all'); 
