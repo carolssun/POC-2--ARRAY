@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arrays</title>
-    <link rel="stylesheet" type="text/style" href="css/style.css">
-    <script src="js/script.js"> </script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <h1> Arrays </h1>
@@ -18,7 +18,16 @@
 
     <section class="filter">
         <h3> Filter </h3>
-        <p> Depois preencher!</p>
+        <p>A função filter em JavaScript é um método de array que cria uma nova array com todos os elementos que passam em um teste fornecido por uma função de callback. Em outras palavras, ela permite que você filtre os itens de um array com base em uma condição e retorna um novo array contendo apenas os elementos que atendem a essa condição.</p>
+        <p><b>Selecione a raça dos gatos para filtrar:</b> </p>
+        <div id="filter-buttons">
+            <button class="filter-btn" data-raca="all">Todas as raças</button>
+            <button class="filter-btn" data-raca="Siamês">Siamês</button>
+            <button class="filter-btn" data-raca="Persa">Persa</button>
+            <button class="filter-btn" data-raca="Exótico">Exótico</button>
+            <button class="filter-btn" data-raca="Não identificada">Não identificada</button>
+        </div>
+        <div id="filter"></div>
     </section>
 
     <section class="map">
@@ -35,6 +44,5 @@
         <h3> Spread </h3>
         <p> Depois preencher!</p>
     </section>
-
 </body>
 </html>
