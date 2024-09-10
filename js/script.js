@@ -1,4 +1,3 @@
-// MAP
 // Array
 const gatos = [
     { nome: 'branco', ração: 'Ração Premium', sachê: 'Sachê de Atum', imagem: 'imagens/branco.png' },
@@ -7,8 +6,7 @@ const gatos = [
     { nome: 'cinza', ração: 'Ração Hipoalergênica', sachê: 'Sachê de Salmão', imagem: 'imagens/cinza.png' },
     { nome: 'laranja', ração: 'Ração Gourmet', sachê: 'Sachê de Peru', imagem: 'imagens/laranja.png' }
 ];
-
-const galeria = document.getElementById('galeria');
+const gatil = document.getElementById('gatil');
 
 // MAP
 gatos.map(gato => {
@@ -17,7 +15,7 @@ gatos.map(gato => {
 
     const img = document.createElement('img');
     img.src = gato.imagem;
-    img.alt = `Gato da raça ${gato.nome}`;
+    img.alt = `Nome do gato: ${gato.nome}`;
     img.className = 'card-img';
 
     const h1 = document.createElement('h1');
@@ -30,15 +28,17 @@ gatos.map(gato => {
     pSache.textContent = `Tipo de Sachê: ${gato.sachê}`;
 
 
-//Console
+//DIV
     const divContent = document.createElement('div');
     divContent.className = 'card-content';
     divContent.appendChild(h1);
     divContent.appendChild(pRacao);
     divContent.appendChild(pSache);
+//CARD
 
     divGato.appendChild(img);
     divGato.appendChild(divContent);
 
-    galeria.appendChild(divGato);
+//CONSOLE
+    gatil.appendChild(divGato);
 });
