@@ -47,8 +47,58 @@
 <div id='map'/>
    
 ### Map
-<p>O método map() em JavaScript cria um novo array transformando cada item do array original com uma função. Ele não muda o array original e evita o uso de loops para fazer essas transformações</p>
+O método map() em JavaScript cria um novo array transformando cada item do array original com uma função. Ele não muda o array original e evita o uso de loops para fazer essas transformações
+##Como Faz:
+Array Original: `Gatos` contém uma lista de objetos com informações sobre  nome, tipo de ração e tipo de sache.
+     
+``` javascript
+const gatos = [
+    { nome: 'branco', ração: 'Ração Premium', sachê: 'Sachê de Atum', imagem: 'imagens/branco.png' },
+    { nome: 'Calico', ração: 'Ração Standard', sachê: 'Sachê de Frango', imagem: 'imagens/calico.png' },
+    { nome: 'Marrom', ração: 'Ração Super Premium', sachê: 'Sachê de Carne', imagem: 'imagens/marrom.png' },
+    { nome: 'cinza', ração: 'Ração Hipoalergênica', sachê: 'Sachê de Salmão', imagem: 'imagens/cinza.png' },
+    { nome: 'laranja', ração: 'Ração Gourmet', sachê: 'Sachê de Peru', imagem: 'imagens/laranja.png' }
+];
+```
+Usamos document.getElementById('gatil') para selecionar o elemento HTML onde os cards serão inseridos.
 
+``` javascript
+const gatil = document.getElementById('gatil');
+```
+Usando a função map() retorna uma nova versão de cada item do array original, de acordo com as transformações que você aplicar na função, para cada item no array, criamos um card com a imagem do gato, o nome, o tipo de ração e o  tipo de sachê.    
+ ```javascript
+gatos.map(gato => {
+    const divGato = document.createElement('div');
+    divGato.className = 'card';
+
+    const img = document.createElement('img');
+    img.src = gato.imagem;
+    img.alt = `Nome do gato: ${gato.nome}`;
+    img.className = 'card-img';
+
+    const h1 = document.createElement('h1');
+    h1.textContent = gato.nome;
+
+    const pRacao = document.createElement('p');
+    pRacao.textContent = `Tipo de Ração: ${gato.ração}`;
+
+    const pSache = document.createElement('p');
+    pSache.textContent = `Tipo de Sachê: ${gato.sachê}`;
+```
+Por fim, os elementos são organizados dentro do `div` e inseridos no elemento com o ID gatil.
+ ```javascript
+    const divContent = document.createElement('div');
+    divContent.className = 'card-content';
+    divContent.appendChild(h1);
+    divContent.appendChild(pRacao);
+    divContent.appendChild(pSache);
+
+    divGato.appendChild(img);
+    divGato.appendChild(divContent);
+
+    gatil.appendChild(divGato);
+```
+![Captura de tela 2024-09-10 111526](https://github.com/user-attachments/assets/e0cc465e-2a36-4525-8c7c-aca4af762506)
 
 <div id='reduce'/>
    
