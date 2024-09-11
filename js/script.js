@@ -102,7 +102,51 @@ function exibirGatosFiltrados() {
     sectionFilter.innerHTML = cardsFiltrados;
 }
 
+// ---------- SPREAD E REDUCE ----------
+const exibirGatosGeral = (lista, containerId) => {
+    const container = document.getElementById(containerId);
+    container.innerHTML = ""; // Limpa o conteúdo existente
+
+    // Cria os cards para cada gato na lista
+    lista.forEach(gato => {
+        const cardGato = `
+            <article class="card">
+                <img src="${gato.foto}" alt="${gato.nome}" class="card-img"/>
+                <div class="card-content">
+                    <h1>${gato.nome}</h1>
+                    <h2>${gato.idade} anos</h2>
+                    <p>Cor: ${gato.cor}</p>
+                    <p>Raça: ${gato.raca}</p>
+                    <p>Tipo de Ração: ${gato.ração}</p>
+                    <p>Tipo de Sachê: ${gato.sachê}</p>
+                </div>
+            </article>
+        `;
+        container.innerHTML += cardGato;
+    });
+};
+
+const idadeGatinhos = listaGatinhos.reduce((accumulator, gato) => {
+    return accumulator += gato.idade;
+  }, 0)
+
+  document.getElementById("soma-idades").innerText = idadeGatinhos;
+
+const listaGatinhosAux = [
+    { nome: "Azula", idade: 5, foto: "./imagens/laranja.png", raca: "Munchkin" },
+    { nome: "Panqueca", idade: 1, foto: "./imagens/calico.png", raca: "Maine Coon" },
+]
+
+const listaGatinhosSpread = [
+    { nome: "Azula", idade: 5, foto: "./imagens/laranja.png", raca: "Munchkin" },
+    { nome: "Panqueca", idade: 1, foto: "./imagens/calico.png", raca: "Maine Coon" },
+    ...listaGatinhos
+]
+
 window.onload = () => {
     exibirGatosOrdenados();
     exibirGatosFiltrados();
+    exibirGatosGeral(listaGatinhos, 'gatinhos-cards');
+    exibirGatosGeral(listaGatinhosAux, 'gatinhos-aux-cards');
+    exibirGatosGeral(listaGatinhosSpread, 'gatinhos-spread-cards');
 };
