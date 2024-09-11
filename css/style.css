@@ -116,6 +116,19 @@ section p {
     margin-bottom: 20px;
     background-color: var(--secondary-color);
   }
+  
 /* REDUCE */
+#gatinhos-cards,
+#gatinhos-aux-cards,
+#gatinhos-spread-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    background-color: var(--secondary-color);
+}
 
 /* SPREAD */
