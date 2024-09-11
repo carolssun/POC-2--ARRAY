@@ -34,6 +34,56 @@
 <div id='filter'/>
    
 ### Filter
+  A função `filter` em JavaScript é um método de array que cria uma nova array com todos os elementos que passam em um teste fornecido por uma função de callback. Em outras palavras, ela permite que você filtre os itens de um array com base em uma condição e retorna um novo array contendo apenas os elementos que atendem a essa condição.</p>
+Veja esse exemplo de filtragem de gatos com mais de 2 anos:
+```js
+function exibirGatosFiltrados() {
+    var listaGatinhosFiltrados = listaGatinhos.filter(function(gato) {
+        return gato.idade > 2; 
+    });
+
+    var sectionFilter = document.getElementById("filter");
+    var cardsFiltrados = '';
+
+    for (var i = 0; i < listaGatinhosFiltrados.length; i++) {
+        var gato = listaGatinhosFiltrados[i];
+        cardsFiltrados += `
+            <article class="card">
+                <img src="${gato.foto}" alt="${gato.cor}" class="card-img"/>
+                <div class="card-content">
+                    <h1>${gato.nome}</h1>
+                    <h2>${gato.idade} anos</h2>
+                    <p>Cor: ${gato.cor}</p>
+                    <p>Raça: ${gato.raca}</p>
+                    <p>Tipo de Ração: ${gato.ração}</p>
+                    <p>Tipo de Sachê: ${gato.sachê}</p>
+                </div>
+            </article>
+        `;
+    }
+
+    sectionFilter.innerHTML = cardsFiltrados;
+}
+
+```
+**1- Filtragem do Array:**
+
+* O método `filter` é utilizado para criar um novo array contendo apenas os gatos cuja idade é maior que 2 anos.
+A função de callback function(gato) { return gato.idade > 2; } é chamada para cada elemento do array original listaGatinhos, retornando true para aqueles que atendem à condição e false para os que não atendem.
+
+**2- Criação de Cards:**
+
+* Para cada gato no array filtrado, é criado um card HTML com informações sobre o gato, incluindo imagem, nome, idade, cor, raça, tipo de ração e tipo de sachê.
+
+**3- Atualização do Conteúdo HTML:**
+
+* Os cards gerados são concatenados em uma única string e definidos como o conteúdo HTML do elemento sectionFilter, atualizando a visualização da página com os gatos filtrados.
+
+**4- Resultado Final:**
+
+
+![filter](https://github.com/user-attachments/assets/4c92cf7b-0b9c-4b59-923f-d6e0178b5750)
+
 
 
 
