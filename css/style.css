@@ -80,6 +80,17 @@ section p {
     gap: 6px;
     text-align: center;
 }
+/* SORT */
+#sort{
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: var(--secondary-color); 
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
 
 /* FILTER */
 #filter {

@@ -1,9 +1,14 @@
+window.onload = () => {
+    exibirGatos('all'); 
+    configurarFiltros(); 
+    exibirGatosOrdenados();
+};
 const listaGatinhos = [
-    { nome: "Gato branco", idade: 2, foto: "./imagens/branco.png", raca: "Siamês" },
-    { nome: "Gato calico", idade: 9, foto: "./imagens/calico.png", raca: "Persa" },
-    { nome: "Gato marrom", idade: 6, foto: "./imagens/marrom.png", raca: "Não identificada" },
-    { nome: "Gato cinza", idade: 2, foto: "./imagens/cinza.png", raca: "Exótico" },
-    { nome: "Gato laranja", idade: 4, foto: "./imagens/laranja.png", raca: "Não identificada" },
+    { nome: " Mingau ", idade: 2, foto: "./imagens/branco.png", cor: "branco", raca: "Siamês" },
+    { nome: " Whisky ", idade: 9, foto: "./imagens/calico.png", cor: "cálico", raca: "Persa" },
+    { nome: " Café ", idade: 6, foto: "./imagens/marrom.png",cor: "marrom", raca: "Não identificada" },
+    { nome: " Luna ", idade: 2, foto: "./imagens/cinza.png",cor: "cinza", raca: "Exótico" },
+    { nome: " Garfield ", idade: 4, foto: "./imagens/laranja.png",cor: "laranja", raca: "Não identificada" },
 ];
 
 
@@ -24,6 +29,7 @@ const exibirGatos = (racaFiltrada) => {
                 <div class="card-content">
                     <h1>${gato.nome}</h1>
                     <h2>${gato.idade} anos</h2>
+                    <p>Cor: ${gato.cor}</p>
                     <p>Raça: ${gato.raca}</p>
                 </div>
             </article>
@@ -44,12 +50,8 @@ const configurarFiltros = () => {
 };
 
 
-window.onload = () => {
-    exibirGatos('all'); 
-    configurarFiltros(); 
-};
+// ---------- MAP ----------
 
-// Map
 const gatos = [
     { nome: 'branco', ração: 'Ração Premium', sachê: 'Sachê de Atum', imagem: 'imagens/branco.png' },
     { nome: 'Calico', ração: 'Ração Standard', sachê: 'Sachê de Frango', imagem: 'imagens/calico.png' },
@@ -91,3 +93,22 @@ gatos.map(gato => {
     galeria.appendChild(divGato);
 });
 
+// ---------- SORT ----------
+const exibirGatosOrdenados = () => {
+    var listaGatinhosCopy= listaGatinhos.slice() //gera uma cópia do original 
+    listaGatinhosCopy.sort((a,b) => a.idade - b.idade )// ordena pela idade
+
+    const sectionSort = document.getElementById("sort");
+        const cardsOrdenados = listaGatinhosCopy.map(gato => `
+            <article class="card">
+                <img src="${gato.foto}" alt="${gato.nome}" class="card-img"/>
+                <div class="card-content">
+                    <h1>${gato.nome}</h1>
+                    <h2>${gato.idade} anos</h2>
+                    <p>Cor: ${gato.cor}</p>
+                    <p>Raça: ${gato.raca}</p>
+                </div>
+            </article>
+        `);
+        sectionSort.innerHTML = cardsOrdenados.join("");
+}
