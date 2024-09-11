@@ -79,13 +79,13 @@ const idadeGatinhos = listaGatinhos.reduce((accumulator, gato) => {
 // ------- SPREAD -------
 // Retona a combinação de duas listas de gatinhos
 const listaGatinhosAux = [
-    { nome: "Gato laranja", idade: 5, foto: "./imagens/laranja.png", raca: "Munchkin" },
-    { nome: "Gato cinza", idade: 1, foto: "./imagens/calico.png", raca: "Maine Coon" },
+    { nome: "Azula", idade: 5, foto: "./imagens/cinza.png", raca: "Munchkin" },
+    { nome: "Neneco", idade: 1, foto: "./imagens/laranja.png", raca: "Maine Coon" },
 ]
 
 const listaGatinhosSpread = [
-    { nome: "Gato laranja", idade: 5, foto: "./imagens/laranja.png", raca: "Munchkin" },
-    { nome: "Gato cinza", idade: 1, foto: "./imagens/calico.png", raca: "Maine Coon" },
+    { nome: "Azula", idade: 5, foto: "./imagens/cinza.png", raca: "Munchkin" },
+    { nome: "Neneco", idade: 1, foto: "./imagens/laranja.png", raca: "Maine Coon" },
     ...listaGatinhos
 ]
 
