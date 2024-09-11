@@ -147,8 +147,7 @@ Por fim, os elementos são organizados dentro de uma `div` e inseridos no elemen
 
     galeria.appendChild(divGato);
 ```
-![Captura de tela 2024-09-10 111526](https://github.com/user-attachments/assets/e0cc465e-2a36-4525-8c7c-aca4af762506)
-
+![WhatsApp Image 2024-09-10 at 21 55 58](https://github.com/user-attachments/assets/5a01ad14-603b-4bdb-b34d-d2996e0f0d6e)
 
 
 
