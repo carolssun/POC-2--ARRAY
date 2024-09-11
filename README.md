@@ -6,8 +6,8 @@
 *  [O que é?](#oque)
 * [Características do Flexbox](#caracteristicas)
    * [filter](#filter)
-   * [map](#map)
    * [sort](#sort)
+   * [map](#map)
    * [reduce](#reduce)
    * [spread](#spread)
 * [Autoras](#autoras)
@@ -34,8 +34,10 @@
 <div id='filter'/>
    
 ### Filter
+  A função filter em JavaScript é um método de array que cria uma nova array com todos os elementos que passam em um teste fornecido por uma função de callback. Em outras palavras, ela permite que você filtre os itens de um array com base em uma condição e retorna um novo array contendo apenas os elementos que atendem a essa condição.</p>
 
 
+<br>
 
 <div id='sort'/>
    
@@ -86,8 +88,7 @@ const exibirGatosOrdenados = () => {
     ![image](https://github.com/user-attachments/assets/9136d263-3e09-4e2c-96e3-d0ffd3bcb55f)
 
 
-
-
+<br>
 
 
 
@@ -154,7 +155,7 @@ Por fim, os elementos são organizados dentro de uma `div` e inseridos no elemen
 <div id='reduce'/>
    
 ### Reduce
-  O método `reduce()` aplica uma função acumuladora a cada elemento do array (da esquerda para a direita) para reduzir o array a um único valor.
+  O método `reduce()` aplica uma função acumuladora a cada elemento do array (da esquerda para a direita) para reduzir o array a um único valor. Ele é muito útil para operações como somar números, concatenar strings ou criar objetos a partir de arrays.
 
 
 
