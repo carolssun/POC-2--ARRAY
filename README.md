@@ -6,8 +6,8 @@
 *  [O que é?](#oque)
 * [Características do Flexbox](#caracteristicas)
    * [filter](#filter)
-   * [sort](#sort)
    * [map](#map)
+   * [sort](#sort)
    * [reduce](#reduce)
    * [spread](#spread)
 * [Autoras](#autoras)
@@ -34,7 +34,7 @@
 <div id='filter'/>
    
 ### Filter
-  A função filter em JavaScript é um método de array que cria uma nova array com todos os elementos que passam em um teste fornecido por uma função de callback. Em outras palavras, ela permite que você filtre os itens de um array com base em uma condição e retorna um novo array contendo apenas os elementos que atendem a essa condição.</p>
+  A função `filter` em JavaScript é um método de array que cria uma nova array com todos os elementos que passam em um teste fornecido por uma função de callback. Em outras palavras, ela permite que você filtre os itens de um array com base em uma condição e retorna um novo array contendo apenas os elementos que atendem a essa condição.</p>
 Veja esse exemplo de filtragem de gatos com mais de 2 anos:
 ```js
 function exibirGatosFiltrados() {
@@ -83,29 +83,6 @@ A função de callback function(gato) { return gato.idade > 2; } é chamada para
 
 
 ![filter](https://github.com/user-attachments/assets/4c92cf7b-0b9c-4b59-923f-d6e0178b5750)
-
-
-
-
-
-<br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -159,7 +136,8 @@ const exibirGatosOrdenados = () => {
     ![image](https://github.com/user-attachments/assets/9136d263-3e09-4e2c-96e3-d0ffd3bcb55f)
 
 
-<br>
+
+
 
 
 
@@ -226,16 +204,52 @@ Por fim, os elementos são organizados dentro de uma `div` e inseridos no elemen
 <div id='reduce'/>
    
 ### Reduce
-  O método `reduce()` aplica uma função acumuladora a cada elemento do array (da esquerda para a direita) para reduzir o array a um único valor. Ele é muito útil para operações como somar números, concatenar strings ou criar objetos a partir de arrays.
+   O método `reduce()` aplica uma função acumuladora a cada elemento do array (da esquerda para a direita) para reduzir o array a um único valor. Ele é muito útil para operações como somar números, concatenar strings ou criar objetos a partir de arrays.
+##Como Faz:
+``` javascript
+const idadeGatinhos = listaGatinhos.reduce((accumulator, gato) => {
+    return accumulator += gato.idade;
+  }, 0)
 
+  document.getElementById("soma-idades").innerText = idadeGatinhos;
+```
+Para conseguir realizar a soma de todas as idades, foi criada uma função com o método `reduce` que vai somando cada uma das idades a partir do índice zero do array.
+Para a visualização do resultado final, a parte em `html` foi construída na forma abaixo:
+``` html
+<section class="reduce"> 
+        <h3> Reduce </h3>
+        <p> A função reduce em JavaScript é um método que faz com que vários elementos de um array 
+            sejam reduzidos para um.  Nesse caso, estamos somando as idades de todos os gatinhos, que no caso é 
+            <span id="soma-idades"></span> anos. 
+        </p>
+        <div id="gatinhos-cards" class="cards-container"></div>
+    </section>
+```
 
+Na imagem é ilustrada os gatinhos do array que foi realizado o `reduce`, sendo o seu total o número 23.
+![image](https://github.com/user-attachments/assets/dbe3f73c-94a0-44fd-bd6f-baf2d3c825b7)
 
 <div id='spread'/>
    
 ### Spread
   O operador de `spread (...)` permite expandir elementos de arrays ou objetos iteráveis em lugares onde múltiplos elementos ou argumentos são esperados.
+##Como Faz:
+``` javascript
+const listaGatinhosAux = [
+    { nome: "Azula", idade: 5, foto: "./imagens/laranja.png", cor: "laranja", raca: "Munchkin", ração: "Ração Premium", sachê: "Sachê de Atum" },
+    { nome: "Panqueca", idade: 1, foto: "./imagens/calico.png", cor: "tricolor", raca: "Maine Coon", ração: "Ração Standard", sachê: "Sachê de Salmão" },
+]
 
+const listaGatinhosSpread = [
+    { nome: "Azula", idade: 5, foto: "./imagens/laranja.png", cor: "laranja", raca: "Munchkin", ração: "Ração Premium", sachê: "Sachê de Atum" },
+    { nome: "Panqueca", idade: 1, foto: "./imagens/calico.png", cor: "tricolor", raca: "Maine Coon", ração: "Ração Standard", sachê: "Sachê de Salmão" },
+    ...listaGatinhos
+]
+```
+Para combinarmos os arrays, utilizamos o `spread` como demonstrado no array `listaGatinhosSpread`, com o `...listaGatinhos`. Isso foi feito sem que precisássemos colocar os gatinhos manualmente ou através do auxílio de um loop.
 
+Abaixo é possível visualizar a `listaGatinhosSpread`, com elementos de ambos os arrays.
+![image](https://github.com/user-attachments/assets/3f1b762b-67eb-4b8a-bf4b-f2eaadedcb2b)
 
 <div id='autoras'/>
    
