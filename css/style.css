@@ -28,23 +28,22 @@ h1, h3 {
 h1 {
     font-size: 2.5rem;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    
 }
 
 h3 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 /* TEXTO */
-p {
+p,h2 {
     font-size: 1rem;
-    margin: 10px 0;
+    margin:  0;
 }
 
 section p {
-    margin: 10px 0;
+    margin: 4px 0;
 }
 
 /* GERAL DO CARD */
@@ -77,12 +76,12 @@ section p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
+    gap: 2px;
     text-align: center;
 }
 /* SORT */
 #sort{
-    padding: 20px;
+    
     border: 1px solid #ddd;
     border-radius: 10px;
     background-color: var(--secondary-color); 
@@ -104,32 +103,7 @@ section p {
     justify-content: center; 
 }
 
-#filter-buttons {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-}
 
-.filter-btn {
-    margin: 5px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--primary-color); 
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-   
-}
-
-.filter-btn.active {
-    background-color: var(--primary-dark); 
-}
-
-.filter-btn:hover {
-    background-color: var(--primary-dark); 
-    transform: scale(1.05);
-}
 
 /* MAP */
 #galeria {
