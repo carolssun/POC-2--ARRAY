@@ -37,25 +37,6 @@ const exibirGatos = (racaFiltrada) => {
     }
 };
 
-const exibirGatosGeral = (lista, containerId) => {
-    const container = document.getElementById(containerId);
-    container.innerHTML = "";
-
-    for (const gato of lista) {
-        const cardGato = `
-            <article class="card">
-                <img src="${gato.foto}" alt="${gato.nome}" class="card-img"/>
-                <div class="card-content">
-                    <h1>${gato.nome}</h1>
-                    <h2>${gato.idade} anos</h2>
-                    <p>Raça: ${gato.raca}</p>
-                </div>
-            </article>
-        `;
-        container.innerHTML += cardGato;
-    }
-};
-
 const configurarFiltros = () => {
     document.querySelectorAll(".filter-btn").forEach(botao => {
         botao.addEventListener("click", function() {
@@ -79,13 +60,13 @@ const idadeGatinhos = listaGatinhos.reduce((accumulator, gato) => {
 // ------- SPREAD -------
 // Retona a combinação de duas listas de gatinhos
 const listaGatinhosAux = [
-    { nome: "Gato laranja", idade: 5, foto: "./imagens/laranja.png", raca: "Munchkin" },
-    { nome: "Gato cinza", idade: 1, foto: "./imagens/calico.png", raca: "Maine Coon" },
+    { nome: "Azula", idade: 5, foto: "./imagens/laranja.png", raca: "Munchkin" },
+    { nome: "Panqueca", idade: 1, foto: "./imagens/calico.png", raca: "Maine Coon" },
 ]
 
 const listaGatinhosSpread = [
-    { nome: "Gato laranja", idade: 5, foto: "./imagens/laranja.png", raca: "Munchkin" },
-    { nome: "Gato cinza", idade: 1, foto: "./imagens/calico.png", raca: "Maine Coon" },
+    { nome: "Azula", idade: 5, foto: "./imagens/laranja.png", raca: "Munchkin" },
+    { nome: "Panqueca", idade: 1, foto: "./imagens/calico.png", raca: "Maine Coon" },
     ...listaGatinhos
 ]
 
