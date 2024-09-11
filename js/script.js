@@ -133,13 +133,13 @@ const idadeGatinhos = listaGatinhos.reduce((accumulator, gato) => {
   document.getElementById("soma-idades").innerText = idadeGatinhos;
 
 const listaGatinhosAux = [
-    { nome: "Azula", idade: 5, foto: "./imagens/laranja.png", raca: "Munchkin" },
-    { nome: "Panqueca", idade: 1, foto: "./imagens/calico.png", raca: "Maine Coon" },
+    { nome: "Azula", idade: 5, foto: "./imagens/laranja.png", cor: "laranja", raca: "Munchkin", ração: "Ração Premium", sachê: "Sachê de Atum" },
+    { nome: "Panqueca", idade: 1, foto: "./imagens/calico.png", cor: "tricolor", raca: "Maine Coon", ração: "Ração Standard", sachê: "Sachê de Salmão" },
 ]
 
 const listaGatinhosSpread = [
-    { nome: "Azula", idade: 5, foto: "./imagens/laranja.png", raca: "Munchkin" },
-    { nome: "Panqueca", idade: 1, foto: "./imagens/calico.png", raca: "Maine Coon" },
+    { nome: "Azula", idade: 5, foto: "./imagens/laranja.png", cor: "laranja", raca: "Munchkin", ração: "Ração Premium", sachê: "Sachê de Atum" },
+    { nome: "Panqueca", idade: 1, foto: "./imagens/calico.png", cor: "tricolor", raca: "Maine Coon", ração: "Ração Standard", sachê: "Sachê de Salmão" },
     ...listaGatinhos
 ]
 
